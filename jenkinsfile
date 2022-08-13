@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { dockerfile true }
     stages {
         stage("clean") {
             steps {
@@ -9,11 +9,6 @@ pipeline{
         stage('clone repo'){
             steps{
                 bat "git clone https://github.com/liran774/python_test.git"
-            }
-        }
-        stage(docker){
-            steps{
-                 dockerfile true 
             }
         }
         stage('end of pipe'){
