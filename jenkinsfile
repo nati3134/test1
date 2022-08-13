@@ -1,5 +1,5 @@
 pipeline{
-    agent { dockerfile true }
+    agent any
     stages {
         stage("clean") {
             steps {
@@ -16,6 +16,11 @@ pipeline{
                 echo 'end of pipeline'
             }
             
+        }
+        stage('docker build'){
+            scripts{
+                bat 'docker build -t liran .'
+            }
         }
         }
     }
