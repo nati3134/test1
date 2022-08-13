@@ -19,7 +19,7 @@ pipeline{
         }
         stage('docker build'){
             steps{
-               agent docker true
+                docker true
             }
             }
             
