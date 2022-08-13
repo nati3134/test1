@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        docker bat 'docker build -t liran .'
+    }
     stages {
         stage("clean") {
             steps {
@@ -11,10 +13,7 @@ pipeline{
                 bat "git clone https://github.com/liran774/python_test.git"
             }
         }
-        stage(docker_build){
-            steps{
-                  bat 'docker build -t liran .'
-            }
+        
         }
     }
 }
