@@ -1,0 +1,6 @@
+FROM ubuntu
+RUN apt update
+RUN apt install python3 -y
+WORKDIR /usr/app/src
+COPY main.py ./ 
+CMD ["python3", "./main.py"]
