@@ -1,7 +1,5 @@
 pipeline{
-    agent {
-        docker 'docker build -t liran .'
-    }
+    agent { dockerfile true }
     stages {
         stage("clean") {
             steps {
