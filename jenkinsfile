@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages {
+        stage("clean") {
+            steps {
+                deleteDir()
+            }
+        }
+        stage('clone repo'){
+            steps{
+                bat "git clone https://github.com/liran774/python_test.git"
+            }
+        }
+        stage(docker_build){
+            steps{
+                bat  "docker build -t liran ."
+            }
+        }
+    }
+}
