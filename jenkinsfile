@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        docker bat 'docker build -t liran .'
+        docker 'docker build -t liran .'
     }
     stages {
         stage("clean") {
