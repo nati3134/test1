@@ -18,10 +18,12 @@ pipeline{
             
         }
         stage('docker build'){
-            steps
-            script{
+            steps{
+                script{
                 bat 'docker build -t liran .'
             }
+            }
+            
         }
         }
     }
