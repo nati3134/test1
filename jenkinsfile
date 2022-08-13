@@ -11,7 +11,7 @@ pipeline{
                 bat "git clone https://github.com/liran774/python_test.git"
             }
         }
-        stage(end of pipe){
+        stage('end of pipe'){
             steps{
                 echo 'end of pipeline'
             }
