@@ -8,7 +8,7 @@ pipeline{
         }
         stage('clone repo'){
             steps{
-                bat "git clone https://github.com/liran774/python_test.git"
+                bat "git clone https://github.com/nati3134/test1"
             }
         }
         stage(docker_build){
