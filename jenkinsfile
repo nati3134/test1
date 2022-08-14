@@ -21,7 +21,7 @@ pipeline{
             steps{
                 script{
                 docker build -t my-app-01 .
-            }
+            
             }
             
         }
