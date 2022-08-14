@@ -8,23 +8,13 @@ pipeline{
         }
         stage('clone repo'){
             steps{
-                bat "git clone https://github.com/nati3134/test1"
+                bat "git clone https://github.com/liran774/python_test.git"
             }
         }
-        stage('end of pipe'){
+        stage(docker_build){
             steps{
-                echo 'end of pipeline'
+                bat  "docker build -t liran ."
             }
-            
-        }
-        stage('docker build'){
-            steps{
-                scrip{
-                    bat 'docker build -t my-app-01 .'
-                    
-            }
-            }
-            
-        }
         }
     }
+}
