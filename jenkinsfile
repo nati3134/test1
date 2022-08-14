@@ -19,11 +19,9 @@ pipeline{
         }
         stage('docker build'){
             steps{
-                script{ 
-                bat '''
-                    cd c/ C:\Users\netamal\.jenkins\workspace\liran-job\test1
-                    'docker build -t my-app-01 .'
-                    '''
+                scrip
+                    bat 'docker build -t my-app-01 .'
+                    
             }
             }
             
