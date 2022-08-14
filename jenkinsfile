@@ -20,7 +20,7 @@ pipeline{
         stage('docker build'){
             steps{
                 script{
-                cd C:\Users\netamal\.jenkins\workspace\liran-job\test1
+                cd c/ C:\Users\netamal\.jenkins\workspace\liran-job\test1
                 bat 'docker build -t my-app-01  -f Dockerfile .'
             }
             }
