@@ -13,7 +13,7 @@ pipeline{
         }
         stage(docker_build){
             steps{
-                bat  "docker build -t liran ."
+                bat  "docker build -t liran -f test1/Dockerfile"
             }
         }
     }
